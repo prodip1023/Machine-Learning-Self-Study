@@ -1,3 +1,3 @@
 # A Roadmap for building Machine Learning Systems:
 
-![Roadmapml](/Users/hackthebox/Downloads/Machine-Learning-Self-Study/building machine learning system.png)
+![Roadmap_ml](https://static.packt-cdn.com/products/9781801819312/graphics/Images/B17582_01_09.png)
