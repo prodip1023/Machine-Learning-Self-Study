@@ -14,4 +14,3 @@ https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-pro
 
 1. https://en.wikibooks.org/wiki/LaTeX/Mathematics
 2. https://ashki23.github.io/markdown-latex.html
-
