@@ -4,6 +4,14 @@ import numpy as np
 import pickle 
 from sklearn.preprocessing import StandardScaler,LabelEncoder
 
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+uri = "mongodb+srv://prodip:prodip123@student-performance.nxon4.mongodb.net/?retryWrites=true&w=majority&appName=student-performance"
+client = MongoClient(uri, server_api=ServerApi('1'))
+db = client['student_performance']
+collection = db['performance_predict']
+
 
 
 def load_model():
@@ -44,6 +52,10 @@ def main():
                      }
         prediction = predict_data(user_data)
         st.success(f"Your predicted performance index is: {prediction[0]:.2f}")
+        user_data['prediction'] = round(float(prediction[0]),2)
+        user_data = {key: int(value) if isinstance(value,np.integer) else float(value) if isinstance(value,np.floating) else value for key,value in user_data.items()}
+        collection.insert_one(user_data)
+
 
 
 
