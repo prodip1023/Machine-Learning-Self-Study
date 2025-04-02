@@ -7,3 +7,4 @@ scikit-learn
 xlrd
 pyprind
 mlxtend == 0.19.0
+xgboost
